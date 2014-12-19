@@ -10,3 +10,7 @@ B print barcode x,y,rotate,format,size,stretch;value
 A set amount
 ; comment
 ````
+[RUSER... ] Read value from (user) memory
+
+[+:XVAL,1] Xval++
+[?:article number,7733214] ask for input
