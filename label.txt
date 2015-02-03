@@ -2,7 +2,16 @@ J
 H 100
 S l1;0,0,30,30,50
 O R
-T 10,5,0,5,pt14;don't touch!
-B 5,7,0,EAN8,12,0.6;20000271
+
+; read values from prompt
+T:start;0,0,0,5,pt14;[?:start number,2021000,,M1111111][I]
+
+; initialize counter
+T:incr;0,0,0,5,5;[SER:000][I]
+
+; print barcode
+B 5,7,0,EAN8,12,0.6;[+:start,incr]
+
 T 15,25,0,5,pt16;LOCc3
-A 5
+; A [?,R]
+A[?]
